@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>| User Profile</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="admin/plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="admin/dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition sidebar-mini">
+
+  <!-- Navbar -->
+
+  <!-- /.navbar -->
+<%- include('sidebar') -%>
+<%- include('header') -%>
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Profile</h1>
+          </div>
+          
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-3">
+
+            <!-- Profile Image -->
+            <div class="card card-primary card-outline">
+              <div class="card-body box-profile">
+                <div class="text-center">
+                  <img class="profile-user-img img-fluid img-circle"
+                       src="admin/dist/img/user4-128x128.jpg"
+                       alt="User profile picture">
+                </div>
+
+                <h3 class="profile-username text-center">Nina Mcintire</h3>
+
+                <p class="text-muted text-center">Software Engineer</p>
+                <ul class="navbar-nav">
+                    
+                <li class="nav-item d-none d-sm-inline-block" >
+              
+                    <a href="/Login" class="nav-link">Login</a>
+                  </li>
+                  <li class="nav-item d-none d-sm-inline-block">
+                    <a href="/register" class="nav-link">SignUp</a>
+                  </li>
+                  <li class="nav-item d-none d-sm-inline-block">
+                    <a href="/change-password" class="nav-link">Change Password</a>
+                  </li>
+                  <!-- <li class="nav-item d-none d-sm-inline-block">
+                    <a href="/adisplay-table" class="nav-link">Table</a> -->
+                  </li>
+                  <li class="nav-item d-none d-sm-inline-block">
+                    <a class="btn btn-primary btn-block" href="/logout" class="nav-link">logout</a>
+               
+                </ul>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+
+            <!-- About Me Box -->
+          
+              <!-- /.card-header -->
+             
+              <!-- /.card-body -->
+            
+            <!-- /.card -->
+         
+          <!-- /.col -->
+          
+          <!-- /.col -->
+        
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+ <!-- FOOTER -->
+
+
+
+
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="admin/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="admin/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="admin/dist/js/demo.js"></script>
+</body>
+</html>

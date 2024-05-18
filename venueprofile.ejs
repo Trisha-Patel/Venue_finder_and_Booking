@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<title>Venue</title>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<meta name="description" content="Weddlist" />
+<meta name="keywords" content="wedding, wedding vendor, wedding vendor directory, HTML template, html theme, wedding html template, wedding html theme, weddlist, weddlist html, weddlist html template">
+<meta name="author" content="udayraj" />
+<meta name="MobileOptimized" content="320" />
+<link href="userside/images/favicon.ico" rel="icon" type="image/x-icon"/> <!-- favicon -->
+<!-- theme style -->
+<link href="userside/css/bootstrap.min.css" rel="stylesheet" type="text/css"/> <!-- bootstrap css -->
+<link href="userside/css/font-awesome.min.css" rel="stylesheet" type="text/css"/> <!-- fontawesome css -->
+<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet"> <!-- google fonts -->
+<link href="userside/css/menumaker.css" rel="stylesheet" type="text/css"/> <!-- menu css -->
+<link href="userside/css/owl.carousel.css" rel="stylesheet" type="text/css"/> <!-- owl carousel css -->
+<link href="userside/css/magnific-popup.css" rel="stylesheet" type="text/css"/> <!-- magnify popup css -->
+<link href="userside/css/datepicker.css" rel="stylesheet" type="text/css"/> <!-- datepicker css -->
+<link href="userside/css/flaticon.css" rel="stylesheet" type="text/css"/> <!-- flaticon css -->
+<link href="userside/css/style.css" rel="stylesheet" type="text/css"/> <!-- custom css -->
+<link href="userside/css/stucture.css" rel="stylesheet" type="text/css"/> <!-- stucture css -->
+<!-- end theme style -->
+</head>
+<!-- end head -->
+<!--body start-->
+<body>
+
+<!--  top bar -->
+<%- include('utop') -%> 
+<!--  end navigation -->
+<!-- page banner -->
+  <section id="page-banner" class="page-banner" style="background-image: url('userside/images/back3.jpg');"> 
+    <div class="overlay-bg"></div>
+    <div class="container">
+      <div class="banner-dtl text-center">
+        <h2 class="banner-heading">Vendor Profile</h2>
+        <div class="breadcrumb-block">
+          <ol class="breadcrumb">
+            <li><a href="dashboard">Home</a></li>
+            <li class="active">Vendor Profile</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- end page banner -->
+<!-- vendor profile -->
+  <section id="vendor-profile" class="vendor-profile-main-page">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="vendor-pro-block">
+            <div class="vendor-pro-info">
+              <div class="row">
+                <div class="col-md-5">
+                  
+                </div>
+               </div>
+            </div>
+           </div>
+        </div>
+       </div>
+      <div class="vendor-profile-listing-block">
+        <div class="row">
+          <% for(var i=0; i<ve.length ; i++){ %>
+          <div class="col-md-4 col-sm-6">
+            <div class="feature-block bline">
+              <div class="feature-img">
+                <h3 class="vendor-profile-listing-heading"><%= ve[i].vetitle %></h3>
+                <a href="#"><img src="/upload/<%= ve[i].vephoto %>" height="200px"></a>
+              </div>
+              <div class="tags tags-clr-one">Featured</div>
+              <div class="feature-dtl">
+                <h6 class="feature-heading"><%= ve[i].vephoto %></a></h6>
+                <p><i class="fa fa-map-marker" aria-hidden="true"></i> Street Address, <%= ve[i].veaddress %></i></p>
+              </div>
+              <div class="row">
+                <div class="col-xs-6">
+                  <div class="feature-vendor">
+                    <a href="#">Venue price</a>
+                  </div>
+                </div>
+                <div class="col-xs-6">
+                  <div class="feature-price text-right">
+                    $<%= ve[i].veprice %>
+                    <% } %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- end vendor profile -->
+<!-- footer -->
+<%- include('ufooter'); -%>
+<!-- end footer -->
+<!-- jquery -->
+<script type="text/javascript" src="userside/js/jquery.min.js"></script>  <!-- jquery library js -->
+<script type="text/javascript" src="userside/js/bootstrap.min.js"></script> <!-- bootstrap js -->
+<script type="text/javascript" src="userside/js/owl.carousel.js"></script> <!-- owl carousel js -->
+<script type="text/javascript" src="js/jquery.ajaxchimp.js"></script> <!-- mail chimp js -->
+<script type="text/javascript" src="userside/js/smooth-scroll.js"></script> <!-- smooth scroll js -->
+<script type="text/javascript" src="userside/js/jquery.magnific-popup.min.js"></script> <!-- magnify popup js --> 
+<script type="text/javascript" src="userside/js/waypoints.min.js"></script> <!-- facts count js required for jquery.counterup.js file -->
+<script type="text/javascript" src="userside/js/jquery.counterup.js"></script> <!-- facts count js-->
+<script type="text/javascript" src="userside/js/menumaker.js"></script> <!-- menu js--> 
+<script type="text/javascript" src="userside/js/jquery.share-tooltip.js"></script> <!-- share tooltip js--> 
+<script type="text/javascript" src="userside/js/price-slider.js"></script> <!-- price slider / filter js-->
+<script type="text/javascript" src="userside/js/bootstrap-datepicker.js"></script> <!-- datepicker js-->
+<script type="text/javascript" src="userside/js/theme.js"></script> <!-- custom js -->  
+<!-- end jquery -->
+</body>
+<!--body end -->
+
+<!-- Mirrored from thegenius.co/html/weddlist/version-1/vendor-profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Jan 2024 05:33:27 GMT -->
+</html>

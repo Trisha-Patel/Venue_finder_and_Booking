@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Booking | Tables</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="/booking/plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="/booking/dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+ <!-- Navbar -->
+ <%- include('../header'); -%> 
+ <!-- /.navbar -->
+
+ <!-- Main Sidebar Container -->
+ <%- include('../sidebar'); -%> 
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+   
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+      
+        <!-- /.row -->
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Booking Table</h3>
+
+                <div class="card-tools">
+                  <div class="input-group input-group-sm" style="width: 150px;">
+                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                    <div class="input-group-append">
+                      <button type="submit" class="btn btn-default">
+                        <i class="fas fa-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body table-responsive p-0">
+                <table class="table table-hover text-nowrap">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Username</th>
+                      <th>Booking Date</th>
+                      <th>Booking Details</th>
+                      <th>Phone No.</th>
+                      <th>Delete</th>
+                    </tr>
+                    <% for(var i=0;i<bookingdata.length;i++){ %>
+                        <tr>
+                            <td><%= i+1 %></td>
+                            <td><%= bookingdata[i].bookingname %></td>
+                            <td><%= bookingdata[i].bookingdate %></td>
+                            <td><%= bookingdata[i].bookingdetails %></td>
+                            <td><%= bookingdata[i].bookingnumber %></td>
+                            <td><a href="/booking/delete/<%= bookingdata[i]._id %>" onclick="return deletecheck();">Delete</a></button></td>
+                        </tr>
+                        <%}%>
+                </table>
+                <script>
+                    function deletecheck(){
+                      return confirm("Are You Sure?");
+                    }
+                  </script>
+              
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+        </div>
+        <!-- /.row -->
+      
+        <!-- /.row -->
+      
+        <!-- /.row -->
+        
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <%- include('../footer'); -%>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="/booking/pro/"></script>
+<!-- Bootstrap 4 -->
+<script src="/booking/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="/booking/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="/booking/dist/js/demo.js"></script>
+</body>
+</html>

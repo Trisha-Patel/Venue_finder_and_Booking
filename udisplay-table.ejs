@@ -1,0 +1,42 @@
+<html>
+    <body>
+        <h1>User Display Table</h1>
+        <% if (userside_array.length>0) { %>
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>DOB</th>
+                <th>ADDRESS</th>
+                <th>Mobile</th>
+                <th>Email</th>
+                <th>Password</th>
+                
+            </tr>
+            <% for(var i=0; i<userside_array.length;i++) { %>
+               <tr>
+                <td><%= i+1 %></td>
+                <td><%= userside_array[i].userside_name %></td>
+                <td><%= userside_array[i].userside_gender %></td>
+                <td><%= userside_array[i].userside_dob %></td>
+                <td><%= userside_array[i].userside_mobile %></td>
+                <td><%= userside_array[i].userside_address %></td>
+                <td><%= userside_array[i].userside_email %></td>
+                <td><%= userside_array[i].userside_password %></td>
+                <td><%= userside_array[i].userside_joindate %></td>
+                <td>
+                    <a href="/edit/userside[i].userside %>">Edit</a>
+                    <a href="/delete/userside[i].userside %>">Delete</a>
+                    <a href="/show/userside[i].userside %>">Show</a>
+                </td>
+               </tr> 
+            
+            <% } %>
+        </table>
+        <% } eles { %>
+            No Record Found
+        <% } %>
+        
+    </body>
+</html>

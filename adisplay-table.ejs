@@ -1,0 +1,40 @@
+<html>
+    <body>
+        <h1>Admin Display Table</h1>
+        <% if (logs_array.length>0) { %>
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>DOB</th>
+                <th>Mobile</th>
+                <th>Email</th>
+                <th>Password</th>
+                
+            </tr>
+            <% for(var i=0; i<logs_array.length;i++) { %>
+               <tr>
+                <td><%= i+1 %></td>
+                <td><%= log_array[i].log_name %></td>
+                <td><%= log_array[i].log_gender %></td>
+                <td><%= log_array[i].log_dob %></td>
+                <td><%= log_array[i].log_mobile %></td>
+                <td><%= log_array[i].log_email %></td>
+                <td><%= log_array[i].log_password %></td>
+                <td><%= log_array[i].log_joindate %></td>
+                <td>
+                    <a href="/edit/logs_array[i].log_id %>">Edit</a>
+                    <a href="/delete/logs_array[i].log_id %>">Delete</a>
+                    <a href="/show/logs_array[i].log_id %>">Show</a>
+                </td>
+               </tr> 
+            
+            <% } %>
+        </table>
+        <% } else {  %>
+            No Record Found
+        <% } %>
+        
+    </body>
+</html>

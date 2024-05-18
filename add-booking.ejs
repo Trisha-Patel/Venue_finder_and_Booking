@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Booking | Form </title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="/booking/plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="/booking/dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+  <!-- Navbar -->
+<%- include('../header'); -%> 
+  <!-- /.navbar -->
+ 
+  <!-- Main Sidebar Container -->
+  <%- include('../sidebar'); -%> 
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+ 
+    <section class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <!-- left column -->
+            <div class="col-md-6">
+              <!-- general form elements -->
+              <div class="card card-primary">
+                <div class="card-header">
+                  <h3 class="card-title">Booking Form</h3>
+                </div>
+             
+              <!-- form start -->
+              <form  class="form-horizontal" method="post" action="bookingprocess" enctype="multipart/form-data">
+                <div class="card-body">
+                    <div class="justify-content-center" type="block"></div>
+                    <div class="form-group">
+                        <label for="exampleInput">User Name</label>
+                        <input type="name" class="form-control" name="name" placeholder="Enter  Name">
+                      </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Booking Date</label>
+                        <input type="date" class="form-control" name="date" >
+                      </div>
+                  
+        
+                  <div class="form-group">
+                    <label for="exampleInputCategory">Booking Details</label>
+                    <textarea class="form-control" input type="details"  rows="3"  name="details" placeholder="Booking Details"></textarea>
+                 </div>
+                 <div class="form-group">
+                    <label for="exampleInput">Phone NO</label>
+                    <input type="name" class="form-control" name="Number" placeholder="Enter Your Phone No.">
+                  </div>
+                 
+                  </div>
+                 
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
+            </div>
+            
+         
+         
+
+          </div>
+        
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <%- include('../footer'); -%>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="/booking/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="/booking/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- bs-custom-file-input -->
+<script src="/booking/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+<!-- AdminLTE App -->
+<script src="/booking/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="/booking/dist/js/demo.js"></script>
+<!-- Page specific script -->
+<script>
+$(function () {
+  bsCustomFileInput.init();
+});
+</script>
+</body>
+</html>

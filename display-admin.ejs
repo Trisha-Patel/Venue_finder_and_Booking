@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdminLTE 3 | Simple Tables</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="/admin/plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="/admin/dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+ <!-- Navbar -->
+ <%- include('../header'); -%> 
+ <!-- /.navbar -->
+
+ <!-- Main Sidebar Container -->
+ <%- include('../sidebar'); -%> 
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+   
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+      
+        <!-- /.row -->
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Admin Table</h3>
+
+                <div class="card-tools">
+                  <div class="input-group input-group-sm" style="width: 150px;">
+                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                    <div class="input-group-append">
+                      <button type="submit" class="btn btn-default">
+                        <i class="fas fa-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body table-responsive p-0">
+                <table class="table table-hover text-nowrap">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Username</th>
+                      <th>Email</th>
+                      <th>Password</th>
+                      <th>Mobile No</th>
+                      <th>Address</th>
+                      <th>Photo</th>
+                      <th>Delete</th>
+                    </tr>
+                    <% for(var i=0;i<admindata.length;i++){ %>
+                        <tr>
+                            <td><%= i+1 %></td>
+                            <td><%= admindata[i].adminname %></td>
+                            <td><%= admindata[i].adminemail %></td>
+                            <td><%= admindata[i].adminpassword %></td>
+                            <td><%= admindata[i].adminmobile %></td>
+                            <td><%= admindata[i].adminpassword %></td>
+                            <td> <img src="/upload/<%= admindata[i].adminphoto %>"width="50px" /> </td>
+                            <td> <a href="/admin/delete/<%= admindata[i]._id %>" onclick="return deletecheck();"> Delete</a></td>
+                        
+                          </tr>
+                        <%}%>
+                </table>
+                <script>
+                    function deletecheck(){
+                      return confirm("Are You Sure?");
+                    }
+                  </script>
+              
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+        </div>
+        <!-- /.row -->
+      
+        <!-- /.row -->
+      
+        <!-- /.row -->
+        
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <%- include('../footer'); -%>
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="/admin/pro/"></script>
+<!-- Bootstrap 4 -->
+<script src="/admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="/admin/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="/admin/dist/js/demo.js"></script>
+</body>
+</html>
